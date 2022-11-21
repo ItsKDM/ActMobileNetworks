@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YOUR REGION"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/cvRegion"
+            app:layout_constraintEnd_toEndOf="@+id/cvRegion"
+            app:layout_constraintStart_toStartOf="@+id/cvRegion" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvRegion"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/black"
+            app:strokeWidth="2dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="20dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/imgFlag"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_flag"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Country"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/txtCountry"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
